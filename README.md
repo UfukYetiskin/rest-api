@@ -52,6 +52,21 @@ GET, veri listelemek ve görüntülemek için kullanılır.
 POST, veri eklemek için kullanılan bir istektir.
 DELETE, veri silmek için kullanılır.
 PATCH, verinin bir kısmının güncellenmesi için kullanılan bir istektir.
+PUT, belirli bir kaynaktaki verinin tamamının değiştirilmesi için kullanılan metodtur.
+
+
+CONNECT - TRACE - OPTIONS - HEAD
+
+SAFE Metotlar
+GET – HEAD – OPTIONS : Sunucu “state” tarafında değişiklik oluşturmazlar. “Read-only” yapısındadırlar.
+
+IDEMPOTENT Metotlar
+GET – HEAD - OPTIONS – DELETE – PUT – TRACE : Tekrar durumunda sunucu state yapısında herhangi bir yan etki bırakmazlar. Safe metodlar, idempotent'tır.
+
+Endpoint (Sorgu Adresi)
+REST API kullanımında gönderilen istek ile verilen cevap için belirlenen buluşma noktasıdır.
+
+Root(Base) /Path yapısından oluşur, isimler kullanılır, fiil ilgili HTTP metodu ile belirtilir. Dökümantasyon tarafından belirtilir.
 
 ![Rest API](https://cdn.hosting.com.tr/bilgi-bankasi/wp-content/uploads/2022/01/rest-api-nedir-nasil-calisir.jpg)
 
@@ -88,4 +103,57 @@ PATCH, verinin bir kısmının güncellenmesi için kullanılan bir istektir.
 6. HTTP 403 (Forbidden), 401'deki gibi Authorization işlemi gerekn yerde yetkisiz giriş yapılmaya çalışılırsa 403 yanıtı verilir.
 7. HTTP 404 (Not Found), verinin talep edildiği URL adresi yok veya bahsedilen URL adresindeki veri geçersiz bir veri ise 404 yanıtı verilir.
 8. HTTP 429 (Too Many Request), sunucunun belirli sayıda yapılacak iste sayısı kısıtlıdır ve bu kapasitenin üstünde bir istek geldiği zaman 429 yanıtı verilerek reddedilir.
+
+## JSON Nedir?
+
+Veri, en önemli varlıklardan biridir. Ancak çeşitli verilerle nasıl çalışılacağını bilmek artık daha da önemli hale geldi. Programcılar, geliştiriciler ve BT uzmanlarının doldurulmuş veri yapılarını herhangi bir dilden diğer diller ve platformlar tarafından tanınabilen formatlara aktarmaları gerekir. JavaScript Nesne Notasyonu (JSON), bunu mümkün kılan veri değişim biçimidir.
+
+JSON; insanların okuyabileceği türde metin içermesi nedeniyle geliştiriciler arasında popüler bir veri formatı hale geldi. Bu format hafif, daha az kodlama gerektiriyor ve daha hızlı işleniyor.
+
+*Veri depolamak veya veri iletmek için kullanılan metin tabanlı bir söz dizimi yapısıdır. Genellikle bir sunucu ve istemci arasında veri alışverişi için veya yazılımların genel ayarları için kullanılan bir formattır.*
+
+### JSON Veri Tipleri
+
+- String  : "Sample String", "test1234", "A"
+- Number : 7, 3.2, -97.238
+- Boolean : true, false
+- Null : null
+- Array : [2,3,4], , ["İstanbul", "Ankara", "İzmir"] Array içerisinde kullanılan değerler sıralı olarak
+- Object : { "name": "İris", "age":23 } JSON nesneleri verileri key-value çiftleri olarak tanımlar.
+
+Yukarıda görmüş olduğunuz veri tiplerinin tamamı tekil olarak uygun bir JSON formatı işlevini görür. Ancak tek bir 3, string veya true gibi ifadeler için ayrı bir .json uzantılı dosya oluşturmak mantıklı değildir. Bu nedenle JSON doayaları bir array, nesne ve/veya bunların içiçe geçmiş formlarından oluşur.
+
+```
+{
+  "id":1,
+  "title": "Matrix",
+  "actors": ["Keanu Reeves", "Carrie Anne Moss"],
+  "published_year": 1999,
+  "genre": {
+    "id": 6,
+    "name": "Action"
+  },
+  isMarried : false,
+  "rating": 7.9
+}   
+```
+
+## XML Nedir?
+
+XML (Genişletilebilir İşaretleme Dili), hem insanlar hem de bilgisayar sistemleri tarafından kolayca okunabilen belgeler oluşturmak için kullanılan bir işaretleme dilidir. W3C tarafından tanımlanan bir standarttır. Veri depolamanın yanında farklı sistemler arasında veri alışverişi yapmak amacıyla ara format görevi görmekte. SGML’nin basitleştirilmiş bir alt kümesidir.
+
+```
+<breakfast_menu>
+  <food>
+    <name>Belgian Waffles</name>
+    <price>$5.95</price>
+    <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+    <calories>650</calories>
+  </food>
+</breakfast_menu>
+```
+
+Genel olarak ağaç yapısına (tree structure) sahiptir. Veriler açılış ve kapanış etiketlerinin içerisinde bulunur. Dıştaki etiket, içtekinin "parent"ı, içteki etiket ise dıştakinin "child"ı şeklinde düşünülür.
+
+**JSON** formatının **XML** formatına göre en büyük avantajı, doğalında bir nesne modeline sahip olmasıdır. Bu özellik sayesinde birçok programlama dili JSON verileri daha kolay bir şekilde işleyebilir.
 
