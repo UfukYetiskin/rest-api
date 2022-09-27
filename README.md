@@ -157,3 +157,29 @@ Genel olarak ağaç yapısına (tree structure) sahiptir. Veriler açılış ve 
 
 **JSON** formatının **XML** formatına göre en büyük avantajı, doğalında bir nesne modeline sahip olmasıdır. Bu özellik sayesinde birçok programlama dili JSON verileri daha kolay bir şekilde işleyebilir.
 
+## Rest API Pratik
+
+### Star Wars API (SWAPI)
+
+SWAPI, Star Wars ekosistemine ait olan filmlerin, kahramanların, gezegenlerin vb bilgilerin sunulduğu ücretsiz bir API ortamıdır. İlk pratik çalışma olarak SWAPI seçmekteki yaklaşımın:
+
+- API istekleri yapma alışkanlığı kazanmak
+- Hazır bir API kullanımı ve ilgili dökümantasyonu incelemek
+- Resource, EndPoint, Status Code gibi teorik olarak konuştuğumuz konuları pratik yapmak
+- Postman kullanım alışkanlığı kazanmak
+
+#### Yapılan İstekler
+
+```
+GET POPULAR MOVIES - GET : https://api.themoviedb.org/3/movie/popular
+GET A MOVIE DETAIL - GET : https://api.themoviedb.org/3/movie/:movie_id
+SEARCH FILM - GET : https://swapi.dev/api/films/?search="value"
+```
+
+##### Query Params
+
+**?** karakteri api isteğinde sorgu karakteridir.. Buarada *value* değerine sahip veriyi api'dan almamızı sağlar. *seacrh* ise api'ın bize sağladığı bir erişim yoludur.
+
+##### API KEY
+
+API isteği yapacağımız sunucu için istemciye özel key isteniyor olabilir. İsteğin doğru dönmesi için bizlere bu api key oluşturulur ve url kısmına değil edilerek istek atılır.
