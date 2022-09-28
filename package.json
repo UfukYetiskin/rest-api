@@ -1,0 +1,22 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "fake rest api",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "json-server --watch api/employees.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UfukYetiskin/rest-api.git"
+  },
+  "keywords": [
+    "fake-rest-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UfukYetiskin/rest-api/issues"
+  },
+  "homepage": "https://github.com/UfukYetiskin/rest-api#readme"
+}

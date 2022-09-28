@@ -183,3 +183,11 @@ SEARCH FILM - GET : https://swapi.dev/api/films/?search="value"
 ##### API KEY
 
 API isteği yapacağımız sunucu için istemciye özel key isteniyor olabilir. İsteğin doğru dönmesi için bizlere bu api key oluşturulur ve url kısmına değil edilerek istek atılır.
+
+
+## Fake Rest API Oluşturma
+
+1. **git init** ile doyasımıza **package.json** dosyasını oluşturuyoruz.
+2. Eğer globalde indirilmiş *json-server* yoksa, **npm install -g json-server** komutu ile paketi kurunuz.
+3. db.json dosyası oluşturarak içerisine verileri ekliyoruz.
+4. **json-server --watch db.json** komutu ile serverı canlıya alıyoruz.
