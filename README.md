@@ -104,6 +104,9 @@ Root(Base) /Path yapısından oluşur, isimler kullanılır, fiil ilgili HTTP me
 7. HTTP 404 (Not Found), verinin talep edildiği URL adresi yok veya bahsedilen URL adresindeki veri geçersiz bir veri ise 404 yanıtı verilir.
 8. HTTP 429 (Too Many Request), sunucunun belirli sayıda yapılacak iste sayısı kısıtlıdır ve bu kapasitenin üstünde bir istek geldiği zaman 429 yanıtı verilerek reddedilir.
 
+
+![COdes](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShKGfyMYPAhTngCzw6uHbDhk2nIsnSpmEk6w&usqp=CAU)
+
 ## JSON Nedir?
 
 Veri, en önemli varlıklardan biridir. Ancak çeşitli verilerle nasıl çalışılacağını bilmek artık daha da önemli hale geldi. Programcılar, geliştiriciler ve BT uzmanlarının doldurulmuş veri yapılarını herhangi bir dilden diğer diller ve platformlar tarafından tanınabilen formatlara aktarmaları gerekir. JavaScript Nesne Notasyonu (JSON), bunu mümkün kılan veri değişim biçimidir.
@@ -157,6 +160,8 @@ Genel olarak ağaç yapısına (tree structure) sahiptir. Veriler açılış ve 
 
 **JSON** formatının **XML** formatına göre en büyük avantajı, doğalında bir nesne modeline sahip olmasıdır. Bu özellik sayesinde birçok programlama dili JSON verileri daha kolay bir şekilde işleyebilir.
 
+![XMLvsJSON](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThanRjMzKY1yexR-kHZRSvOFFU8B2dIkMCgQ&usqp=CAU)
+
 ## Rest API Pratik
 
 ### Star Wars API (SWAPI)
@@ -193,6 +198,8 @@ API isteği yapacağımız sunucu için istemciye özel key isteniyor olabilir. 
 4. **json-server --watch db.json** komutu ile serverı canlıya alıyoruz.
 
 
+![Fake Rest](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL0s8K582vkr74KWgi5I7qrLWuM7izwL85hw&usqp=CAU)
+
 ## cURL Nedir ? 
 
 URL üzerinden veri transferi yapmamızı sağlayan bir komut satırı aracıdır. REST API çerçeverinde sorgu adreslerine yapılan isteklerde sıklıkla kullanılır. HTTP, HTTPS, FTP, FTPS, GOPHER, GOPHERS, IMAP, IMAPS vs.. bir çok protokolü desteklemektedir.
@@ -202,3 +209,5 @@ URL üzerinden veri transferi yapmamızı sağlayan bir komut satırı aracıdı
 - I (--head): Yalnızca HTTP başlıklarını görmek için kullanılır.
 - o (--output) <file> : Çıktıyı bir dosyaya yazdırmak için kullanılır.
 - v (--verbose): Daha fazla detay.
+
+![cURL](https://serdardasdemir.com/wp-content/uploads/2021/01/curl-kullanimi-3.png)
